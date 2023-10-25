@@ -25,3 +25,17 @@ SELECT * FROM animals WHERE name <> 'Gabumon';
 
 -- Find all animals with a weight between 10.4kg and 17.3kg (including the animals with the weights that equal precisely 10.4kg or 17.3kg):
 SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
+
+
+-- new quesries submission 2
+BEGIN;
+
+-- Update the "species" column for all animals to "Unspecified"
+UPDATE animals
+SET species = 'Unspecified';
+
+SELECT * FROM animals;
+
+ROLLBACK;
+
+SELECT * FROM animals;
