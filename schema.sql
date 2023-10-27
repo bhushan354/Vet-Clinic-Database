@@ -27,5 +27,7 @@ CREATE TABLE species (
 );
 
 ALTER TABLE animals
+DROP COLUMN species;
+
 ADD COLUMN species_id integer REFERENCES species(id),
 ADD COLUMN owner_id integer REFERENCES owners(id);
