@@ -93,9 +93,8 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
 
-- **[you can add or remove or filter out data inside the table]**
+- **[stores data in realtional database]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -230,7 +229,6 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
 
 If you like this project consider starring this repository
 
