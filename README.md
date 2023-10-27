@@ -40,14 +40,11 @@ After you're finished please remove all the comments and instructions!
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
-    - [Prerequisites](#prerequisites)
     - [Setup](#setup)
+    - [Prerequisites](#prerequisites)
     - [Install](#install)
     - [Usage](#usage)
-    - [Run tests](#run-tests)
-    - [Deployment](#deployment)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -93,105 +90,53 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
 
-- **[you can add or remove or filter out data inside the table]**
+- **[stores data in realtional database]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-
-- Live Demo Will be added soon
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
+
 ## 💻 Getting Started <a name="getting-started"></a>
 
-
 To get a local copy up and running, follow these steps.
-
-### Prerequisites
-
-In order to run this project you need:
-
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
+- Choose a directory
+- Open a Terminal
+- write: git clone git@github.com:bhushan354/Vet-clinic-Database.git
+- get into to directory "Vet-clinic"
+- write: npm install
 
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
+### Prerequisites
+- Browser
+- PostgreSQL
+- Code Editor
+- Git
 
 ### Install
 
-Install this project with psql running
-
-<!--
-Example command:
+To install the project's dependencies, run:
 
 ```sh
-  cd my-project
-  gem install
+  apt-get -y install PostgreSQL
 ```
---->
 
 ### Usage
 
-To run the project, copy the commands from files and run it in your terminal.
-
-
-<!--
-Example command:
+To run the project, execute the following command:
 
 ```sh
-  rails server
+  psql vet_clinic;
 ```
---->
-
-### Run tests
-
-Tests will be added soon .
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
-### Deployment
-
-You can deploy this project using:
-- netlify
-- github pages
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -230,7 +175,6 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
 
 If you like this project consider starring this repository
 
