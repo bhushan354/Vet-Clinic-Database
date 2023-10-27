@@ -31,3 +31,23 @@ DROP COLUMN species;
 
 ADD COLUMN species_id integer REFERENCES species(id),
 ADD COLUMN owner_id integer REFERENCES owners(id);
+
+--4
+CREATE TABLE vets (
+    id serial PRIMARY KEY,
+    name varchar(255),
+    age integer,
+    date_of_graduation date
+);
+
+CREATE TABLE specializations (
+    vet_id integer REFERENCES vets(id),
+    species_id integer REFERENCES species(id),
+    PRIMARY KEY (vet_id, species_id)
+);
+
+CREATE TABLE visits (
+    animal_id integer REFERENCES animals(id),
+    vet_id integer REFERENCES vets(id),
+    visit_date date
+);
