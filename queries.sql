@@ -25,3 +25,89 @@ SELECT * FROM animals WHERE name <> 'Gabumon';
 
 -- Find all animals with a weight between 10.4kg and 17.3kg (including the animals with the weights that equal precisely 10.4kg or 17.3kg):
 SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
+
+
+-- new quesries submission 2
+BEGIN;
+
+-- Update the "species" column for all animals to "Unspecified"
+
+-- 1
+UPDATE animals
+SET species = 'Unspecified';
+
+SELECT * FROM animals;
+
+ROLLBACK;
+
+SELECT * FROM animals;
+
+-- 2
+BEGIN;
+
+UPDATE animals
+SET species = 'Digimon'
+WHERE name LIKE '%mon';
+
+UPDATE animals
+SET species = 'Pokemon'
+WHERE species = 'Unspecified';
+
+SELECT * FROM animals;
+
+COMMIT;
+
+SELECT * FROM animals;
+
+-- 3
+BEGIN;
+
+DELETE FROM animals;
+
+ROLLBACK;
+
+SELECT * FROM animals;
+
+-- 4
+BEGIN;
+
+DELETE FROM animals
+WHERE date_of_birth > '2022-01-01';
+
+SAVEPOINT savepoint1;
+
+UPDATE animals
+SET weight_kg = weight_kg * -1;
+
+ROLLBACK TO savepoint1;
+
+UPDATE animals
+SET weight_kg = weight_kg * -1
+WHERE weight_kg < 0;
+
+COMMIT;
+
+SELECT * FROM animals;
+
+-- 5
+SELECT COUNT(*) FROM animals;
+
+--6 
+SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
+
+--7
+SELECT AVG(weight_kg) FROM animals;
+
+--8
+SELECT neutered, MAX(escape_attempts) AS max_escape_attempts
+FROM animals
+GROUP BY neutered;
+
+--9
+SELECT species, MIN(weight_kg), MAX(weight_kg) FROM animals GROUP BY species;
+
+--10
+SELECT species, AVG(escape_attempts)
+FROM animals
+WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31'
+GROUP BY species;
