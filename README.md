@@ -136,6 +136,7 @@ To run the project, execute the following command:
 
 ```sh
   psql vet_clinic;
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
